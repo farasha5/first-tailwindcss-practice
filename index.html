@@ -4,46 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>First Tailwind Project</title>
-    <!-- tailwind cdn -->
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="bg-slate-800 text-white">
 
+    <!-- NAVBAR -->
     <nav class="bg-slate-500 shadow-2xl">
-        <div class="max-w-6xl mx-auto px-4 py-6 items-center">
-            <div class="sm:flex justify-between">
-                <div class="sm:text-3xl text-xl font-bold text-center mb-2 sm:mt-0">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="flex flex-col sm:flex-row justify-between items-center">
+                
+                <!-- Logo -->
+                <div class="text-3xl font-bold mb-3 sm:mb-0">
                     <a href="#">
-                        <span class="text-blue-900">T</span><span>ailwind</span><span class="text-blue-900">P</span><span>ractice</span>
+                        <span class="text-blue-900">T</span>ailwind
+                        <span class="text-blue-900">P</span>ractice
                     </a>
                 </div>
-                <ul class="sm:flex text-xl text-center border-t sm:border-none mt-2 sm:mt-0">
-                    <li><a href="" class="p-3 text-blue-900 font-semibold">Home</a></li>
-                    <li><a href="" class="p-3 hover:text-blue-700 font-semibold">Portfolio</a></li>
-                    <li><a href="" class="p-3 hover:text-blue-700 font-semibold">Contact</a></li>
-                    <li><a href="" class="p-3 hover:text-blue-700 font-semibold">Projects</a></li>
+
+                <!-- Menu -->
+                <ul class="flex flex-col sm:flex-row text-xl text-center gap-2 sm:gap-5 mt-2 sm:mt-0">
+                    <li><a href="#" class="p-2 text-blue-900 font-semibold">Home</a></li>
+                    <li><a href="#" class="p-2 hover:text-blue-700 font-semibold">Portfolio</a></li>
+                    <li><a href="#" class="p-2 hover:text-blue-700 font-semibold">Contact</a></li>
+                    <li><a href="#" class="p-2 hover:text-blue-700 font-semibold">Projects</a></li>
                 </ul>
+
             </div>
         </div>
     </nav>
 
-    <header>
-        <div class="container mx-auto border border-indigo-500 border-t-0 sm:flex justify-around items-center text-center h-[80vh] px-20">
-            
-            <div>
-                <h1 class="text-4xl sm:2xl mb-5 sm:mb-15">Learn Programming:<br> It's Fun</h1>
-            <button class="bg-indigo-500 px-7 py-3 rounded-full text-2xl shadow-2xl hover:bg-indigo-800">Click</button>
+    <!-- HEADER SECTION -->
+    <header class="w-full">
+        <div class="max-w-6xl mx-auto px-6 sm:px-20 py-10 sm:h-[80vh] flex flex-col sm:flex-row justify-around items-center gap-10">
+
+            <!-- Left Text -->
+            <div class="text-center sm:text-left">
+                <h1 class="text-4xl sm:text-6xl mb-8 font-bold leading-tight">
+                    Learn Programming:<br> It's Fun
+                </h1>
+
+                <button class="bg-indigo-500 px-9 py-4 rounded-full text-2xl shadow-2xl hover:bg-indigo-800 transition">
+                    Click
+                    <svg class="w-7 inline-block text-orange-400 ml-3 animate-ping"
+                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+                </button>
             </div>
-                <div>
-                    <img src="./img/download.jpeg" alt="" class="h-[400px] w-[300px] animate-pulse">
-                </div>
-            
+
+            <!-- Right Image -->
+            <div>
+                <img src="./img/download.jpeg"
+                     class="h-[300px] sm:h-[400px] w-auto rounded-md animate-pulse"
+                     alt="Programming Image">
+            </div>
         </div>
     </header>
 
 </body>
-
 </html>
